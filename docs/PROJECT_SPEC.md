@@ -1,8 +1,8 @@
-# Palmetto Stay FP&A Project Specification — Blueprint v1.2
+# Palmetto Stay FP&A Project Specification — Blueprint v1.3
 
 - **Status:** Locked
 - **Date:** 2026-09-11
-- **Implementation status:** Phase 4 complete; Phase 5 not started
+- **Implementation status:** Phase 5 complete; Phase 6 independent audit pending
 
 This document is the authoritative specification for the Palmetto Stay FP&A portfolio project. The decisions below are locked and must be implemented without redesign unless a later validation failure or documented project requirement justifies a controlled change.
 
@@ -239,17 +239,27 @@ The workbook must not contain hidden calculation tabs, macros, circular referenc
 - `Variance` remains the complete Phase 3 analysis and `Review` remains status-only. Phase 4 adds no management recommendations, charts, PDF, images, or final packaging.
 - RF1 accuracy cannot be evaluated until later actual results exist. The three scenarios are decision-support cases, not confidence intervals, and are not probability weighted.
 
+### 12.4 Phase 5 implementation
+
+- `Review` is complete as a two-page management-facing worksheet and is the direct source for the exported PDF. Page 1 summarizes H1 actual performance against the approved budget, management interpretation, supporting operating drivers, and the reconciled contribution bridge. Page 2 summarizes the FY2026 Base outlook, the Budget/Base/Upside/Downside range, risks, opportunities, and four owned follow-ups.
+- Key displayed results and all three chart source ranges are formula-linked to `Variance`, `Budget`, or `Forecast`. No `Review` formula references `Checks`, and no management output drives model calculations.
+- The three authorized charts are an H1 contribution-impact view, a monthly occupancy view with an explicit June actual / July forecast boundary, and a full-year contribution comparison.
+- The approved Budget, Phase 3 Variance analysis, Phase 4 Forecast logic, and the frozen approved-assumption range remain unchanged.
+- `Checks` retains the 146 prior controls and adds 33 Phase 5 controls covering displayed KPI ties, bridge and scenario links, chart sources, output architecture, management-language boundaries, and the PDF/image package. The combined 179-control master status remains terminal.
+- The workbook opens on `Start`, contains exactly eight visible sheets, and has no macros, external workbook links, hidden sheets, circular iteration, or volatile formulas.
+- The public output package contains one two-page landscape PDF exported directly from `Review` and two PNG previews rendered from the final PDF pages.
+
 ## 13. Management output
 
-The final Review tab and exported PDF will contain two pages.
+The completed `Review` tab and exported PDF contain exactly two landscape pages.
 
 ### Page 1
 
-- June and YTD performance.
+- H1 actual performance.
 - Revenue and contribution versus budget.
 - Occupancy, ADR, and RevPAR.
 - Contribution bridge.
-- Three material explanations.
+- Concise, evidence-bounded management explanations.
 - Timing-versus-ongoing classification.
 
 ### Page 2
@@ -257,11 +267,10 @@ The final Review tab and exported PDF will contain two pages.
 - Full-year budget versus latest estimate.
 - Base/Upside/Downside comparison.
 - Monthly actual-versus-forecast trend.
-- Two risks.
-- Two opportunities.
-- Three recommended follow-ups.
+- Material risks and opportunities.
+- Four recommended follow-ups with owners, timing, and expected evidence.
 
-The management output is limited to a maximum of three charts and approximately 350–500 words. It must not become a decorative dashboard, and no separate slide deck will be created.
+The management output is limited to three charts and approximately 350–500 words. It is a compact decision document rather than a decorative dashboard, and no separate slide deck is included.
 
 ## 14. Synthetic case construction
 
@@ -324,11 +333,10 @@ palmetto-stay-fpa/
 │   ├── DECISION_LOG.md
 │   ├── case_brief.md
 │   └── methodology_and_sources.md
-├── outputs/
-│   └── Palmetto_Stay_Management_Review.pdf
-└── images/
-    ├── management_review.png
-    └── variance_bridge.png
+└── outputs/
+    ├── Palmetto_Stay_Management_Review.pdf
+    ├── management_review_page_1.png
+    └── management_review_page_2.png
 ```
 
 The private `Palmetto_Stay_Case_Builder_AUTHORING.xlsx` is intentionally excluded from this public structure.
@@ -340,7 +348,7 @@ The private `Palmetto_Stay_Case_Builder_AUTHORING.xlsx` is intentionally exclude
 - **Phase 2 — Workbook architecture and frozen annual budget.**
 - **Phase 3 — Actuals, KPIs, and variance analysis.**
 - **Phase 4 — Reforecast and scenarios (complete).**
-- **Phase 5 — Management output and repository packaging.**
+- **Phase 5 — Management output and repository packaging (complete).**
 - **Phase 6 — Independent audit, remediation, and final release.**
 
 The overall build ceiling is 21–30 hours. If that ceiling is threatened, scope must be reduced rather than expanded.

@@ -1,72 +1,74 @@
 # Palmetto Stay — Operating Performance Review & Reforecast
 
-Excel-based FP&A case study for a fictional limited-service hotel, featuring annual budgeting, actual-vs-plan variance analysis, driver-based reforecasting, scenarios, and management reporting. The project is designed as a focused Analyst I portfolio case with a governed, auditable path from source facts to a two-page management review.
+An Excel-based FP&A portfolio case for a fictional 100-room limited-service hotel. The project follows a governed path from frozen synthetic source facts through an approved operating budget, H1 actual-versus-plan analysis, a driver-based RF1 reforecast, scenarios, and a two-page management review.
 
-> **Current status: Phase 4 complete; the approved 2026 operating budget, January–June actual-performance analysis, and 2026 RF1 Base/Upside/Downside reforecast are built. Management reporting and final packaging remain scheduled for later phases.**
+> **Status:** Phase 5 complete. The workbook, management-review PDF, and two portfolio preview images are ready; Phase 6 independent audit and final release remain pending.
 
-> **Synthetic-case disclosure:** Palmetto Stay is a fictional hotel created for an independent FP&A portfolio project. All company-specific historical results, budgets, actuals, operating records, staffing information, and management updates are synthetic. Public sources may inform selected industry definitions and modeling practices; they are not the source of Palmetto Stay’s internal data. The project does not represent employment, client work, or access to confidential company information.
+> **Synthetic-case disclosure:** Palmetto Stay is fictional. All company-specific historical results, budgets, actuals, operating records, staffing information, and management updates are synthetic and contain no confidential information. Public references inform selected definitions and modeling discipline only.
 
-## Business and analyst assignment
+## Review the case
 
-Palmetto Stay is one fictional, independently operated, leased limited-service hotel with 100 available rooms. The analyst role is a junior FP&A analyst supporting a property finance manager through the June 2026 close, first-half performance review, and revised July–December outlook, culminating in a two-page management-facing output.
+- [Download the Excel model](model/Palmetto_Stay_FP&A_Model.xlsx)
+- [Open the two-page management review](outputs/Palmetto_Stay_Management_Review.pdf)
+- [View management review — page 1](outputs/management_review_page_1.png)
+- [View management review — page 2](outputs/management_review_page_2.png)
+- [Read the case brief](docs/case_brief.md)
+- [Review methodology and sources](docs/methodology_and_sources.md)
+- [Inspect the project specification](docs/PROJECT_SPEC.md)
 
-## Locked scope
+## Management-review preview
 
-- Build a frozen 2026 annual budget from operating drivers.
-- Load synthetic actual facts for January–December 2025 and January–June 2026.
-- Analyze June and year-to-date actual performance against budget, including revenue volume/mix/rate and cost-driver variances.
-- Reforecast July–December 2026 while preserving actuals, seasonality, and known timing.
-- Compare Base, Upside, and Downside scenarios through operational-driver changes.
-- Report room revenue, modeled property operating costs, hotel KPIs, and property operating contribution.
-- Keep the work to one property, exactly eight workbook tabs, a two-page management output, and a 21–30-hour total build ceiling.
+[![H1 performance and contribution bridge](outputs/management_review_page_1.png)](outputs/Palmetto_Stay_Management_Review.pdf)
 
-The approved exclusions include multi-property operations, ancillary restaurants/events/bars/spas, daily booking or booking-channel analysis, employee-level planning, integrated balance-sheet or cash-flow statements, debt, valuation, machine learning, Monte Carlo simulation, databases, Tableau, custom applications, enterprise planning architecture, automated narratives, excessive scenarios, and a large codebase.
+[![RF1 outlook, scenarios, risks, and actions](outputs/management_review_page_2.png)](outputs/Palmetto_Stay_Management_Review.pdf)
 
-## Planned final deliverables
+## What the work demonstrates
 
-- `model/Palmetto_Stay_FP&A_Model.xlsx` — an eight-tab Excel model.
-- Five frozen source-data CSV files in `data/`.
-- `outputs/Palmetto_Stay_Management_Review.pdf` — the two-page management review.
-- Two selected review images in `images/`.
-- Supporting case brief and methodology documentation in `docs/`.
+- A formula-driven FY2026 operating budget built from frozen monthly drivers.
+- January–June actual performance linked to recorded source facts, with derived hotel and labor KPIs.
+- Reconciled revenue volume/mix/rate and operating-cost driver bridges.
+- A property operating contribution bridge with explicit sign conventions.
+- A 2026 RF1 Base case using H1 actuals plus an evidence-based H2 forecast.
+- Bounded Upside and Downside cases driven by operating assumptions rather than blanket financial shocks.
+- A concise, formula-linked management review with three decision-useful charts and four owned follow-ups.
+- A terminal `Checks` sheet with 179 passing controls and no downstream dependency.
 
-The Phase 1 source files and documentation and the Phase 2–4 public workbook now exist. The workbook contains the final eight-tab architecture, static frozen-source imports, a formula-driven approved 2026 operating budget, reconciled January–June 2026 actual-performance analysis, and the `2026 RF1` reforecast with Base, Upside, and Downside cases. Management conclusions, the review PDF, and portfolio images have not been built.
+## Fast reviewer path
 
-## Available Phase 1 source files
+1. Start with the [two-page PDF](outputs/Palmetto_Stay_Management_Review.pdf) for the conclusions, scenario range, risks, and actions.
+2. Open the [Excel model](model/Palmetto_Stay_FP&A_Model.xlsx) on `Start` and follow the workflow through `Data`, `Assumptions`, `Budget`, `Variance`, `Forecast`, and `Review`.
+3. Finish on `Checks` to inspect source integrity, model mechanics, bridge reconciliation, forecast boundaries, review links, and output controls.
 
-- `data/approved_budget_assumptions.csv` — the approved 2026 driver assumption pack for the future Budget tab.
-- `data/operating_actuals.csv` — occupied room nights and recorded room revenue by customer segment.
-- `data/labor_actuals.csv` — recorded housekeeping hours, housekeeping payroll, fixed-staff FTE, and fixed-staff payroll.
-- `data/financial_actuals.csv` — recorded monthly financial lines.
-- `data/case_updates.csv` — dated management and operating observations through July 8, 2026.
+## Workbook architecture
 
-Case version `v1.0` contains January–December 2025 historical actuals, January–June 2026 recorded actuals, and the January–December 2026 approved assumption pack. The private deterministic Case Builder is retained outside this public repository.
+The workbook contains exactly eight visible worksheets in this order:
 
-## Available Phase 2–4 workbook
+1. `Start` — purpose, navigation, conventions, and build status.
+2. `Data` — frozen recorded actuals and dated case updates.
+3. `Assumptions` — approved budget drivers and the separate RF1 scenario layer.
+4. `Budget` — monthly and full-year approved operating budget.
+5. `Forecast` — Base, Upside, and Downside actual-plus-forecast cases.
+6. `Variance` — YTD scorecard, monthly comparison, driver bridges, and evidence register.
+7. `Review` — the two-page management-facing output exported to PDF.
+8. `Checks` — terminal source, model, aggregation, architecture, and output controls.
 
-- `model/Palmetto_Stay_FP&A_Model.xlsx` — the public Excel workbook with the eight locked visible tabs in their final order.
-- `Data` contains static imports of the four recorded-fact and case-update sources.
-- `Assumptions` preserves the frozen approved 2026 assumption pack and adds a visibly separate `2026 RF1` assumption layer with basis, source, and rationale.
-- `Budget` calculates the monthly and FY2026 approved operating budget from those assumptions and internal calendar logic.
-- `Variance` contains the YTD scorecard, matched monthly actual-versus-budget detail, prior-year comparison, reconciled revenue and cost-driver bridges, the contribution bridge, and an evidence-controlled commentary register.
-- `Forecast` contains January–June recorded actuals, July–December driver-based forecasts, a full-year scenario summary, and vertically stacked Base, Upside, and Downside operating-model blocks. Base is expanded; Upside and Downside detail is grouped for collapse.
-- `Checks` is a terminal control sheet with 146 retained and expanded controls spanning the budget, actuals, variance bridges, forecast boundary, scenario logic, and architecture. No other worksheet depends on its results, and `Start` directs the reviewer to inspect it using static text.
+The workbook has no macros, hidden worksheets, external workbook links, circular iteration, or volatile formulas. The approved budget remains frozen, January–June actuals are identical across scenarios, and no output worksheet depends on `Checks`.
 
-`Review` remains an intentional status-only sheet until Phase 5. Phase 4 includes no management recommendations, charts, PDF, images, or exported review artifacts.
+## Case scope and conventions
 
-## Implementation phases
+The model covers room revenue, housekeeping payroll, guest-service expense, distribution/payment expense, fixed-staff payroll, rent, property overhead, marketing, and property operating contribution. It intentionally excludes ancillary operations, balance-sheet and cash-flow modeling, debt, valuation, daily booking analysis, employee-level planning, probability-weighted scenarios, and enterprise planning architecture.
 
-1. **Phase 0 — Repository foundation and project governance (complete):** defined and locked the project before implementation.
-2. **Phase 1 — Synthetic case construction, validation, and freeze (complete):** produced deterministic source facts privately and published validated frozen inputs.
-3. **Phase 2 — Workbook architecture and frozen annual budget (complete):** built the eight-tab workbook, imported the frozen sources, and calculated the driver-based approved budget.
-4. **Phase 3 — Actuals, KPIs, and variance analysis (complete):** linked recorded facts, built reconciled monthly and YTD performance analysis, attributed material variances, and documented evidence boundaries.
-5. **Phase 4 — Reforecast and scenarios (complete):** actualized the first half, built the July–December driver-based outlook, compared three bounded operating scenarios, and expanded model controls.
-6. **Phase 5 — Management output and repository packaging:** complete the two-page review and recruiter-ready repository.
-7. **Phase 6 — Independent audit, remediation, and final release:** validate, correct, and release the finished case.
+Property operating contribution is room revenue less modeled property operating costs, including rent, before depreciation, financing, income taxes, and corporate overhead. It is a project-defined management measure, not GAAP operating income, EBITDA, cash flow, or standardized hotel GOP.
 
-If the 21–30-hour ceiling is threatened, scope will be reduced rather than expanded.
+Expense schedules use `Actual cost − Budget cost`, where positive is unfavorable. The contribution bridge reverses expense effects so positive contribution impact is favorable. Revenue effects enter unchanged.
 
-## Planned final repository structure
+## Data and evidence boundary
+
+Case version `v1.0` includes January–December 2025 actuals, January–June 2026 actuals, and the January–December 2026 approved budget assumption pack. The RF1 information cutoff is July 8, 2026. The private deterministic Case Builder remains outside this public repository; published CSVs are static and frozen.
+
+RF1 forecast accuracy cannot yet be evaluated because no later actuals exist. Base, Upside, and Downside are transparent decision-support cases, not confidence intervals or probability-weighted outcomes.
+
+## Repository contents
 
 ```text
 palmetto-stay-fpa/
@@ -84,15 +86,10 @@ palmetto-stay-fpa/
 │   ├── DECISION_LOG.md
 │   ├── case_brief.md
 │   └── methodology_and_sources.md
-├── outputs/
-│   └── Palmetto_Stay_Management_Review.pdf
-└── images/
-    ├── management_review.png
-    └── variance_bridge.png
+└── outputs/
+    ├── Palmetto_Stay_Management_Review.pdf
+    ├── management_review_page_1.png
+    └── management_review_page_2.png
 ```
 
-The Phase 0 governance files, Phase 1 source-data and documentation files, and Phase 2–4 workbook now exist. Empty output and image directories have not been created.
-
-## Intended recruiter review experience
-
-A reviewer will be able to understand the assignment and governance from the repository landing page, open the finished workbook to trace assumptions through budget, actuals, variances, forecast, scenarios, and checks, and then review the same management conclusions in a concise two-page PDF. The completed case is intended to demonstrate disciplined entry-level FP&A judgment, transparent formulas, exact reconciliations, and concise communication—not enterprise-system complexity.
+Phase 6 is limited to independent audit, remediation if needed, and final release. No Phase 6 work is included here.

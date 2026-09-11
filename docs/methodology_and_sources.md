@@ -75,6 +75,20 @@ The full-year summary compares approved Budget, Base, Upside, and Downside, whil
 
 RF1 forecast accuracy cannot be evaluated until later actual results exist. Phase 3 actual-versus-budget analysis is the available evidence about approved-plan performance; no artificial future actuals were created. Phase 4 validation covers independent scenario reconstruction, formula and package integrity, visual inspection, and restored disposable sensitivity tests, but excludes management conclusions, recommendations, charts, PDF/image exports, and final packaging.
 
+## Phase 5 management-review and output methodology
+
+Phase 5 converts the validated analysis into a two-page management decision document without creating new business logic. Key values on `Review` link directly to the existing H1 scorecard and contribution bridge on `Variance`, the approved FY2026 results on `Budget`, and the scenario summary and monthly Base path on `Forecast`. Chart helper ranges sit outside the print area and remain formula-linked and visible for inspection. No `Review` formula references `Checks`, and no output feeds a model calculation.
+
+Page 1 reports H1 occupancy, room revenue, property operating contribution, and contribution margin against the approved budget. It presents the existing contribution impacts using the model’s established convention: positive impact is favorable, revenue effects enter unchanged, and expense effects are reversed. The supporting driver table keeps demand, customer mix, ADR, housekeeping productivity, wage, and guest-service unit cost visible beside the management interpretation.
+
+Page 2 reports the FY2026 Budget, Base, Upside, and Downside cases and marks the June actual / July forecast boundary explicitly in the monthly occupancy view. Management implications distinguish observed first-half results, dated case evidence, and forecast judgment. The marketing deferral remains timing rather than a structural saving; the unconfirmed overhead item remains a follow-up rather than an annualized assumption. The page includes four follow-ups with an owner, timing, and expected evidence.
+
+The three charts are intentionally limited to decision-useful comparisons: H1 contribution impact by driver, monthly occupancy, and full-year contribution by case. A standard impact bar is used instead of a native waterfall because it survives the controlled Excel export reliably; the adjacent formula-linked table supplies the exact bridge start, end, direction, and reconciliation.
+
+The PDF is exported directly from `Review` using a fixed `B1:N96` print area, landscape letter orientation, one page wide, two pages tall, and a manual break before the RF1 outlook page. The two public PNG files are rasterized from the final PDF pages, so the workbook, PDF, and preview images present the same management content.
+
+`Checks` remains terminal and expands from 146 to 179 passing controls. Phase 5 controls cover displayed KPI ties, bridge reconciliation, scenario and chart-source links, the actual/forecast boundary, management-language constraints, page setup, artifact count, and package integrity. Phase 6 remains the separate independent audit and release stage.
+
 ## Public source files and fields
 
 ### `approved_budget_assumptions.csv`

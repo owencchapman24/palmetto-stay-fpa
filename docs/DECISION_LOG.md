@@ -112,3 +112,23 @@ Any source-data correction must be made through the private Case Builder, frozen
 
 - Phase 4 validation requires independent reconstruction of all monthly and annual scenario results, exact H1 actualization, preserved approved Budget and Phase 3 Variance logic, a clean formula-error scan, all 146 controls passing, package and formula-architecture audits, rendered inspection of every sheet and scenario block, and restored disposable sensitivity tests.
 - Phase 4 does not authorize changes to frozen case version `v1.0`, public CSVs, `docs/case_brief.md`, the private Case Builder, management reporting, charts, exports, or any Phase 5–6 work.
+
+## 2026-09-11 — Phase 5 management review and recruiter-facing package completed
+
+**Status:** Complete; Phase 6 independent audit pending
+
+### Decisions
+
+- Replaced the `Review` status notice with a two-page management decision document. Page 1 presents the H1 KPI strip, four evidence-bounded management messages, supporting operating drivers, and the fully reconciled contribution bridge. Page 2 presents the FY2026 Base outlook, the Budget/Base/Upside/Downside range, outlook implications, risks and opportunity, and four owned follow-ups.
+- Linked all key displayed management values and chart source ranges to existing `Variance`, `Budget`, and `Forecast` outputs. `Review` does not reference `Checks`, and no new reverse dependency into model calculations was introduced.
+- Used exactly three decision-useful charts: contribution impact by H1 driver, monthly occupancy with an explicit June actual / July forecast boundary, and FY2026 property operating contribution by case. A simple impact bar was used for the bridge because it exported reliably through the native Excel/PDF path while the adjacent table preserves the exact starting point, ending point, sign convention, and reconciliation.
+- Preserved the approved Budget, Phase 3 Variance analysis, Phase 4 Forecast logic, and the frozen approved-assumption range. The private Case Builder and frozen source files were not modified.
+- Updated `Start` to identify Phase 5 completion and Phase 6 as pending. `Checks` retains the 146 prior controls, evolves the two phase-bound Review/chart architecture labels, and adds 33 Phase 5 controls for a total of 179 passing controls.
+- Exported `outputs/Palmetto_Stay_Management_Review.pdf` directly from the workbook `Review` print area as exactly two landscape letter pages. Created `outputs/management_review_page_1.png` and `outputs/management_review_page_2.png` by rasterizing the corresponding final PDF pages.
+- Reworked the repository landing page around the reviewer path, direct artifact links, embedded page previews, workbook architecture, model scope, validation highlights, and the synthetic-data/evidence boundary.
+- Kept forecast-accuracy language constrained: RF1 cannot be evaluated until later actual results exist, and the scenarios remain unweighted decision-support cases rather than confidence intervals.
+
+### Validation boundary
+
+- Phase 5 validation requires independent reconstruction of published H1 and full-year metrics, formula-link and bridge checks, all 179 controls passing, preservation comparisons for Budget, Variance, Forecast, and the frozen approved-assumption range, a clean formula-error scan, workbook/package audits, direct PDF page-count and size checks, and visual inspection of both final PDF-derived PNGs.
+- Phase 5 does not authorize a commit, push, pull, fetch, rebase, reset, clean, history rewrite, source-data change, Case Builder change, or any Phase 6 remediation or release work.
