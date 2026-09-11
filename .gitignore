@@ -1,0 +1,20 @@
+# Excel temporary files
+~$*.xlsx
+~$*.xlsm
+*.tmp
+
+# Private authoring materials
+private/
+working/
+Palmetto_Stay_Case_Builder_AUTHORING.xlsx
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
