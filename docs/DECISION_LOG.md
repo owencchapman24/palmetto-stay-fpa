@@ -115,7 +115,7 @@ Any source-data correction must be made through the private Case Builder, frozen
 
 ## 2026-09-11 — Phase 5 management review and recruiter-facing package completed
 
-**Status:** Complete; Phase 6 independent audit pending
+**Status:** Complete; superseded by Portfolio Release `v1.0`
 
 ### Decisions
 
@@ -123,7 +123,7 @@ Any source-data correction must be made through the private Case Builder, frozen
 - Linked all key displayed management values and chart source ranges to existing `Variance`, `Budget`, and `Forecast` outputs. `Review` does not reference `Checks`, and no new reverse dependency into model calculations was introduced.
 - Used exactly three decision-useful charts: contribution impact by H1 driver, monthly occupancy with an explicit June actual / July forecast boundary, and FY2026 property operating contribution by case. A simple impact bar was used for the bridge because it exported reliably through the native Excel/PDF path while the adjacent table preserves the exact starting point, ending point, sign convention, and reconciliation.
 - Preserved the approved Budget, Phase 3 Variance analysis, Phase 4 Forecast logic, and the frozen approved-assumption range. The private Case Builder and frozen source files were not modified.
-- Updated `Start` to identify Phase 5 completion and Phase 6 as pending. `Checks` retains the 146 prior controls, evolves the two phase-bound Review/chart architecture labels, and adds 33 Phase 5 controls for a total of 179 passing controls.
+- Updated `Start` to identify Phase 5 completion. `Checks` retains the 146 prior controls, evolves the two phase-bound Review/chart architecture labels, and adds 33 Phase 5 controls for a total of 179 passing controls.
 - Exported `outputs/Palmetto_Stay_Management_Review.pdf` directly from the workbook `Review` print area as exactly two landscape letter pages. Created `outputs/management_review_page_1.png` and `outputs/management_review_page_2.png` by rasterizing the corresponding final PDF pages.
 - Reworked the repository landing page around the reviewer path, direct artifact links, embedded page previews, workbook architecture, model scope, validation highlights, and the synthetic-data/evidence boundary.
 - Kept forecast-accuracy language constrained: RF1 cannot be evaluated until later actual results exist, and the scenarios remain unweighted decision-support cases rather than confidence intervals.
@@ -132,3 +132,29 @@ Any source-data correction must be made through the private Case Builder, frozen
 
 - Phase 5 validation requires independent reconstruction of published H1 and full-year metrics, formula-link and bridge checks, all 179 controls passing, preservation comparisons for Budget, Variance, Forecast, and the frozen approved-assumption range, a clean formula-error scan, workbook/package audits, direct PDF page-count and size checks, and visual inspection of both final PDF-derived PNGs.
 - Phase 5 does not authorize a commit, push, pull, fetch, rebase, reset, clean, history rewrite, source-data change, Case Builder change, or any Phase 6 remediation or release work.
+
+## 2026-09-11 — Phase 6 independent audit and Portfolio Release v1.0 prepared
+
+**Status:** Complete; final release candidate remains uncommitted
+
+### Initial findings and corrections
+
+- **Blocker — workbook package privacy:** the XLSX package retained an absolute local Windows path containing the authoring username. The authoritative public-release requirement prohibits computer-specific references. Removed only the package-level absolute-path record.
+- **Blocker — inappropriate authoring metadata:** the internal Office theme name contained `ChatGPT`, and the workbook creator field identified an authoring library rather than the portfolio author. The public-release privacy and professionalism requirements are authoritative. Renamed the theme to `Palmetto Stay` and set author and last-modified metadata to `Owen Chapman`.
+- **Material improvement — scenario navigation:** the specification required collapsible Upside and Downside detail, but no outline groups remained in the workbook. Grouped and collapsed `Forecast` rows `73:116` and `121:164` in native Excel. No formula, value, or assumption changed.
+- **Material improvement — final status and recruiter orientation:** `Start` and the repository documentation still described Phase 6 as pending, and the README did not state the main conclusion near the top. Updated only release-status, validation, conclusion, artifact, and limitation language.
+- No analytical correction was required. Frozen sources, budget logic, actuals, variance attribution, RF1 assumptions, scenario results, the `Review` sheet, PDF, and PNGs remain unchanged.
+
+### Independent validation
+
+- Reconstructed the approved FY2026 budget, H1 2026 actuals and matched budget, H1 2025 comparison, all monthly and YTD variance components, the complete contribution bridge, and all Base/Upside/Downside RF1 months outside the workbook.
+- Maximum workbook-versus-independent differences were `$0.0000000005` for monetary results, `0.0000000000003333` for ratios, and `0.000000000003` for nights and hours, within respective tolerances of `$0.01`, `1e-7`, and `1e-6`.
+- Verified zero material bridge residuals; the largest independently calculated residual was less than `$0.0000000000000000000001` before display rounding.
+- Opened, fully recalculated, saved, closed, and reopened the workbook in native Excel. The workbook opens on `Start`, retains all eight visible sheets in the locked order, preserves the three charts and `Review` print area, and reports `179 / 179 PASS` with master status `PASS`.
+- Revalidated the XLSX package, every formula cell, chart sources, the two-page landscape PDF, both exact 2200 × 1700 PDF-derived PNGs, and every repository-relative README link.
+- Final public artifacts are `model/Palmetto_Stay_FP&A_Model.xlsx`, `outputs/Palmetto_Stay_Management_Review.pdf`, `outputs/management_review_page_1.png`, and `outputs/management_review_page_2.png`.
+
+### Release boundary
+
+- Portfolio Release `v1.0` is validated within the project’s stated scope. This is an internal portfolio-model review, not third-party assurance or an accounting audit opinion.
+- The final candidate remains uncommitted. Phase 6 performs no Git write, tag, or release operation and does not proceed beyond final release preparation.

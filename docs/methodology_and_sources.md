@@ -21,7 +21,7 @@ The construction sequence is:
 7. Calculate distribution/payment expense as exactly 4% of recognized room revenue.
 8. Export the resulting recorded facts as static public CSV values.
 
-The 2026 approved assumption pack was constructed from completed 2025 history and documented planning assumptions and is dated before 2026 actual results. Limited authoring calculations confirm that the driver pack produces a coherent, positive property operating contribution, but the public budget itself will be calculated only in Phase 2.
+The 2026 approved assumption pack was constructed from completed 2025 history and documented planning assumptions and is dated before 2026 actual results. Limited authoring calculations confirmed that the driver pack produced a coherent, positive property operating contribution; the public budget was subsequently calculated in Phase 2 from the frozen assumptions.
 
 ## Actuals-independence rule
 
@@ -87,7 +87,19 @@ The three charts are intentionally limited to decision-useful comparisons: H1 co
 
 The PDF is exported directly from `Review` using a fixed `B1:N96` print area, landscape letter orientation, one page wide, two pages tall, and a manual break before the RF1 outlook page. The two public PNG files are rasterized from the final PDF pages, so the workbook, PDF, and preview images present the same management content.
 
-`Checks` remains terminal and expands from 146 to 179 passing controls. Phase 5 controls cover displayed KPI ties, bridge reconciliation, scenario and chart-source links, the actual/forecast boundary, management-language constraints, page setup, artifact count, and package integrity. Phase 6 remains the separate independent audit and release stage.
+`Checks` remains terminal and expands from 146 to 179 passing controls. Phase 5 controls cover displayed KPI ties, bridge reconciliation, scenario and chart-source links, the actual/forecast boundary, management-language constraints, page setup, artifact count, and package integrity.
+
+## Phase 6 independent audit and release validation
+
+Phase 6 independently reconstructed the material model results outside Excel using only the frozen CSVs and the documented methodology. The work covered all 12 approved-budget months and FY2026, H1 2026 actuals and matched budget, H1 2025 comparison, every monthly and YTD revenue and cost attribution, the full contribution bridge, and each monthly Base, Upside, and Downside RF1 case. The maximum differences against workbook results were `$0.0000000005` for money, `0.0000000000003333` for ratios, and `0.000000000003` for nights and hours. These are within tolerances of `$0.01`, `1e-7`, and `1e-6`.
+
+The workbook was also opened, fully recalculated, saved, closed, and reopened in native Excel. All eight sheets remained visible in the locked order, `Start` remained the opening sheet, the three charts and `Review` print area remained intact, and `Checks` returned exactly `179 / 179 PASS` with master status `PASS`. Upside and Downside detail on `Forecast` is grouped and collapsed by default.
+
+Package review found and removed one absolute local-path record and replaced an internal authoring-theme label with `Palmetto Stay`. Workbook author and last-modified metadata are `Owen Chapman`. The final package has no macros, external links, hidden sheets, circular iteration, volatile formulas, connections, Power Query, pivots, data model, broken relationships, or unintended media. No formula outside `Checks` references `Checks`.
+
+`outputs/Palmetto_Stay_Management_Review.pdf` remains the workbook’s direct two-page landscape `Review` export. Fresh 200-DPI rendering reproduced `outputs/management_review_page_1.png` and `outputs/management_review_page_2.png` exactly; both PNGs are 2200 × 1700. Phase 6 required no change to financial logic, frozen sources, assumptions, `Review`, the PDF, or the PNGs.
+
+This validation is limited to the project’s stated scope. It is an independent portfolio-model reconstruction and adversarial review, not third-party assurance or an accounting audit opinion.
 
 ## Public source files and fields
 
@@ -203,7 +215,9 @@ Do not hand-patch public actuals to force a reconciliation. If a source-data def
 - Aggregate fixed staffing rather than employee-level planning.
 - No integrated balance sheet, cash-flow statement, debt, valuation, depreciation, tax, or corporate overhead.
 - A fixed 4% distribution/payment rate with no fee-rate scenario.
+- Base, Upside, and Downside are judgment-based decision cases, not probabilities or confidence intervals.
 - No forecast-accuracy claim because no frozen forecast vintage and subsequent unseen actuals exist.
+- The project does not represent employment by or advice to a real company.
 
 ## References for definitions and modeling practice
 

@@ -1,8 +1,8 @@
-# Palmetto Stay FP&A Project Specification — Blueprint v1.3
+# Palmetto Stay FP&A Project Specification — Portfolio Release v1.0
 
 - **Status:** Locked
 - **Date:** 2026-09-11
-- **Implementation status:** Phase 5 complete; Phase 6 independent audit pending
+- **Implementation status:** Phase 6 complete; Portfolio Release `v1.0` validated within the project’s stated scope
 
 This document is the authoritative specification for the Palmetto Stay FP&A portfolio project. The decisions below are locked and must be implemented without redesign unless a later validation failure or documented project requirement justifies a controlled change.
 
@@ -249,6 +249,16 @@ The workbook must not contain hidden calculation tabs, macros, circular referenc
 - The workbook opens on `Start`, contains exactly eight visible sheets, and has no macros, external workbook links, hidden sheets, circular iteration, or volatile formulas.
 - The public output package contains one two-page landscape PDF exported directly from `Review` and two PNG previews rendered from the final PDF pages.
 
+### 12.5 Phase 6 independent audit and release preparation
+
+- The five frozen CSV sources were re-parsed and compared cell by cell with their static workbook imports. Schema, row count, date coverage, key uniqueness, capacity, revenue, payroll, and distribution-fee controls reconciled without an unexplained difference.
+- The approved Budget, January–June 2026 actuals and matched budget, January–June 2025 comparison, monthly and YTD variance bridges, and Base/Upside/Downside RF1 cases were independently reconstructed outside the workbook from frozen sources and documented assumptions.
+- Every formula cell was scanned for errors and prohibited dependencies. The model retains one-way source and assumption flow, aggregate annual ratios, zero bridge residuals within tolerance, and a terminal `Checks` sheet with exactly 179 passing controls.
+- Native Excel opened, recalculated, saved, and reopened the workbook without a repair or external-link warning. All eight sheets remain visible in the locked order, `Start` opens first, the three charts render, and the Upside and Downside `Forecast` detail is grouped and collapsed.
+- The XLSX package was checked for macros, hidden sheets, external links, connections, Power Query, pivots, a data model, circular iteration, volatile formulas, broken relationships, inappropriate metadata, and unintended media. An absolute local-path record and an internal authoring-theme label were removed; workbook author and last-modified metadata are `Owen Chapman`.
+- `outputs/Palmetto_Stay_Management_Review.pdf` remains the direct two-page landscape export from `Review`. `outputs/management_review_page_1.png` and `outputs/management_review_page_2.png` remain exact 200-DPI renders of the corresponding PDF pages at 2200 × 1700 pixels.
+- Phase 6 changes release status, corrects package/privacy metadata, and restores the previously specified scenario grouping. It does not alter frozen sources, financial logic, scenario assumptions, prior-phase outputs, or the private Case Builder.
+
 ## 13. Management output
 
 The completed `Review` tab and exported PDF contain exactly two landscape pages.
@@ -313,9 +323,9 @@ All public Phase 1 CSVs are UTF-8, comma-delimited static values with one header
 
 The four versioned source files use `case_version = v1.0`. Actual ADR, effective housekeeping wage, housekeeping hours per occupied room, and guest-service cost per occupied room must remain derived measures and must not be added to the public actual-source schemas.
 
-## 16. Planned final repository structure
+## 16. Final repository structure
 
-This is the planned final structure. Directories and deliverables must be created only in their authorized implementation phase; currently empty directories must not be created early.
+Portfolio Release `v1.0` uses this compact public structure:
 
 ```text
 palmetto-stay-fpa/
@@ -349,7 +359,7 @@ The private `Palmetto_Stay_Case_Builder_AUTHORING.xlsx` is intentionally exclude
 - **Phase 3 — Actuals, KPIs, and variance analysis.**
 - **Phase 4 — Reforecast and scenarios (complete).**
 - **Phase 5 — Management output and repository packaging (complete).**
-- **Phase 6 — Independent audit, remediation, and final release.**
+- **Phase 6 — Independent audit, remediation, and final release (complete).**
 
 The overall build ceiling is 21–30 hours. If that ceiling is threatened, scope must be reduced rather than expanded.
 

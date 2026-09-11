@@ -2,9 +2,11 @@
 
 An Excel-based FP&A portfolio case for a fictional 100-room limited-service hotel. The project follows a governed path from frozen synthetic source facts through an approved operating budget, H1 actual-versus-plan analysis, a driver-based RF1 reforecast, scenarios, and a two-page management review.
 
-> **Status:** Phase 5 complete. The workbook, management-review PDF, and two portfolio preview images are ready; Phase 6 independent audit and final release remain pending.
+> **Status:** Portfolio Release `v1.0` is complete. The budget, actual-performance analysis, variance bridges, and RF1 scenarios were independently reconstructed and adversarially reviewed within the project’s stated scope. Native Excel, the workbook package, the management-review PDF, both PNG previews, and all repository-relative links passed final validation.
 
 > **Synthetic-case disclosure:** Palmetto Stay is fictional. All company-specific historical results, budgets, actuals, operating records, staffing information, and management updates are synthetic and contain no confidential information. Public references inform selected definitions and modeling discipline only.
+
+**Main conclusion:** H1 2026 room revenue was `$98,191.74` below budget and property operating contribution was `$80,526.59` below budget, led by lower occupied room nights. Base RF1 projects FY2026 property operating contribution of `$1,137,547.18`, below the approved budget of `$1,279,795.41`; even the Upside case remains below plan.
 
 ## Review the case
 
@@ -32,6 +34,7 @@ An Excel-based FP&A portfolio case for a fictional 100-room limited-service hote
 - Bounded Upside and Downside cases driven by operating assumptions rather than blanket financial shocks.
 - A concise, formula-linked management review with three decision-useful charts and four owned follow-ups.
 - A terminal `Checks` sheet with 179 passing controls and no downstream dependency.
+- An independent Phase 6 reconstruction of the approved budget, H1 actuals, variance attribution, and all three RF1 cases, followed by native Excel and published-output validation.
 
 ## Fast reviewer path
 
@@ -52,7 +55,7 @@ The workbook contains exactly eight visible worksheets in this order:
 7. `Review` — the two-page management-facing output exported to PDF.
 8. `Checks` — terminal source, model, aggregation, architecture, and output controls.
 
-The workbook has no macros, hidden worksheets, external workbook links, circular iteration, or volatile formulas. The approved budget remains frozen, January–June actuals are identical across scenarios, and no output worksheet depends on `Checks`.
+The workbook has no macros, hidden worksheets, external workbook links, circular iteration, or volatile formulas. The approved budget remains frozen, January–June actuals are identical across scenarios, Upside and Downside detail is grouped and collapsed on `Forecast`, and no output worksheet depends on `Checks`.
 
 ## Case scope and conventions
 
@@ -92,4 +95,14 @@ palmetto-stay-fpa/
     └── management_review_page_2.png
 ```
 
-Phase 6 is limited to independent audit, remediation if needed, and final release. No Phase 6 work is included here.
+## Remaining limitations
+
+- Palmetto Stay and all company-specific internal data are fictional and synthetic.
+- Assumptions were designed for a portfolio case rather than adopted from a real operating company.
+- The model covers one hotel and focuses on property operating contribution.
+- It does not forecast a balance sheet or a full cash-flow statement.
+- Base, Upside, and Downside are judgment-based decision cases, not probabilities or confidence intervals.
+- RF1 forecast accuracy cannot be measured until later actual results exist.
+- The project does not represent employment by, assurance for, or advice to a real company.
+
+Portfolio Release `v1.0` completes Phase 6. Final artifacts are `model/Palmetto_Stay_FP&A_Model.xlsx`, `outputs/Palmetto_Stay_Management_Review.pdf`, `outputs/management_review_page_1.png`, and `outputs/management_review_page_2.png`.
