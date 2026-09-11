@@ -53,3 +53,23 @@ These decisions are locked unless a later validation failure or documented proje
 - Phase 1 does not contain a forecast vintage, variance conclusions, scenarios, or management recommendations.
 
 Any source-data correction must be made through the private Case Builder, frozen as a new case version, independently revalidated, and recorded in this log.
+
+## 2026-09-11 — Phase 2 workbook architecture and approved budget completed
+
+**Status:** Locked
+
+### Decisions
+
+- Created `model/Palmetto_Stay_FP&A_Model.xlsx` with exactly eight visible worksheets in the locked order: Start, Data, Assumptions, Budget, Forecast, Variance, Review, and Checks.
+- Imported the four recorded-fact and case-update CSVs as static typed values on `Data` and the approved 2026 assumption pack as static typed values on `Assumptions`. The workbook contains no external CSV or private-authoring link.
+- Established `Assumptions` as the single authoritative source for the approved budget. `Budget` uses monthly date matching, internal calendar calculations, and transparent quantity-times-rate formulas; it does not depend on historical actuals, case updates, or later-phase tabs.
+- Calculated FY2026 additive measures by summing monthly results and calculated occupancy, corporate share, ADR, RevPAR, productivity, effective rates, unit costs, and contribution margin from annual numerators and denominators rather than averaging monthly ratios.
+- Kept expenses as positive values and subtracted total operating costs when calculating property operating contribution.
+- Implemented `Checks` as a terminal control sheet covering source integrity, monthly operating logic, cost reconciliation, annual aggregation, and workbook integrity. Its master Phase 2 status exists only on `Checks`.
+- Replaced the proposed formula link from `Start` to the master check result with a static instruction directing the reviewer to inspect `Checks`. This narrow control-design correction prevents check outputs from driving another worksheet while retaining a clear review step.
+- Reserved `Forecast`, `Variance`, and `Review` for later phases and added intentional status notices without forecast values, variance calculations, scenarios, charts, or management conclusions.
+
+### Validation boundary
+
+- Phase 2 validation requires a clean formula-error scan, an independent monthly and annual budget comparison, source-value comparison, package-integrity review, visual inspection of every worksheet, and restored perturbation tests.
+- Phase 2 does not authorize changes to frozen case version `v1.0`, the private Case Builder, or any Phase 3–6 analysis.

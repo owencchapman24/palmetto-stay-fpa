@@ -33,6 +33,16 @@ Public actuals store source facts rather than reconstructed driver results:
 
 Actual ADR, housekeeping hours per occupied room, effective housekeeping wage, and guest-service cost per occupied room are not source fields. Later work must derive them from the recorded numerators and denominators. Public source files contain no formulas and do not link to the private Case Builder.
 
+## Phase 2 public workbook implementation
+
+Phase 2 created `model/Palmetto_Stay_FP&A_Model.xlsx` with the final eight-tab public architecture. `Data` stores static typed copies of the financial, operating, labor, and case-update CSVs. `Assumptions` stores the frozen approved assumption pack as the single authoritative source for the 2026 budget. The source tables use real Excel dates and retain every public field and row without external CSV links.
+
+The `Budget` sheet matches each monthly header to `Assumptions` and applies the documented operating relationships. Available room nights equal rooms multiplied by calendar days; occupied nights split into retail/leisure and negotiated corporate nights using the approved mix; segment nights and ADR produce room revenue; and approved productivity, wage, unit-cost, staffing, rent, overhead, marketing, and distribution-fee assumptions produce operating costs. Property operating contribution equals total room revenue less total operating costs.
+
+The FY2026 column sums additive measures. It calculates occupancy, corporate share, blended ADR, RevPAR, housekeeping hours per occupied room, effective housekeeping wage, guest-service unit cost, effective distribution fee rate, and contribution margin from annual numerators and denominators. Monthly operating levels use an appropriate annual average or weighted calculation.
+
+`Checks` remains terminal. It reads source and Budget results but does not feed model calculations or displayed statuses elsewhere. `Start` contains only a static instruction to inspect `Checks`; it has no formula dependency on the check result. `Forecast`, `Variance`, and `Review` remain status-only sheets until their authorized phases.
+
 ## Public source files and fields
 
 ### `approved_budget_assumptions.csv`

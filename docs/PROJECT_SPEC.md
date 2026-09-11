@@ -2,7 +2,7 @@
 
 - **Status:** Locked
 - **Date:** 2026-09-11
-- **Implementation status:** Phase 1 complete; Phase 2 not started
+- **Implementation status:** Phase 2 complete; Phase 3 not started
 
 This document is the authoritative specification for the Palmetto Stay FP&A portfolio project. The decisions below are locked and must be implemented without redesign unless a later validation failure or documented project requirement justifies a controlled change.
 
@@ -81,7 +81,7 @@ Recorded actual inputs must include:
 
 Actual ADR, effective wage, and guest-service unit cost are derived from recorded actual facts. The Budget and Forecast tabs will use forward driver formulas. The Data tab must not reconstruct actuals from budget assumptions.
 
-The frozen `data/approved_budget_assumptions.csv` file is the source input for the future Budget tab. It contains approved operating and cost drivers only. The Phase 2 Budget tab must calculate financial outputs from those assumptions and must not treat a precomputed budget as source data.
+The frozen `data/approved_budget_assumptions.csv` file is the source input for the Budget tab. It contains approved operating and cost drivers only. The Phase 2 Budget tab calculates financial outputs from those assumptions and does not treat a precomputed budget as source data.
 
 ## 7. Distribution-fee rule
 
@@ -204,6 +204,18 @@ The final workbook will contain exactly eight tabs, in this order:
 8. Checks
 
 The workbook must not contain hidden calculation tabs, macros, circular references, or external workbook links.
+
+### 12.1 Phase 2 implementation
+
+- The public workbook is `model/Palmetto_Stay_FP&A_Model.xlsx` and contains the eight required visible tabs in the locked order.
+- `Data` holds static, typed imports of `financial_actuals.csv`, `operating_actuals.csv`, `labor_actuals.csv`, and `case_updates.csv`. It does not calculate actual KPIs or variances.
+- `Assumptions` holds `approved_budget_assumptions.csv` as the single authoritative input for the approved 2026 budget.
+- `Budget` matches each monthly header to the approved source and calculates capacity, segment room nights, segment revenue, hotel KPIs, operating costs, property operating contribution, and contribution margin through ordinary formulas.
+- The distribution and payment calculation references the monthly approved fee assumption rather than hardcoding 4% in an operating formula.
+- The FY2026 column sums additive measures. Occupancy, corporate share, ADR, RevPAR, housekeeping productivity, effective wage, guest-service unit cost, effective distribution fee rate, and contribution margin use annual numerators and denominators. Monthly operating levels use an appropriate average or weighted annual presentation.
+- `Checks` is terminal. It reads source and Budget results, contains the master Phase 2 status, and does not feed any other worksheet.
+- `Start` contains a static instruction to inspect `Checks`. It does not display or reference the master check result. This controlled correction replaces the proposed Start-to-Checks dependency and preserves the rule that checks validate the model without driving model outputs.
+- `Forecast`, `Variance`, and `Review` contain status notices only. Their calculations and management content remain reserved for later phases.
 
 ## 13. Management output
 
