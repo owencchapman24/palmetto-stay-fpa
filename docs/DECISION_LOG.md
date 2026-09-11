@@ -73,3 +73,22 @@ Any source-data correction must be made through the private Case Builder, frozen
 
 - Phase 2 validation requires a clean formula-error scan, an independent monthly and annual budget comparison, source-value comparison, package-integrity review, visual inspection of every worksheet, and restored perturbation tests.
 - Phase 2 does not authorize changes to frozen case version `v1.0`, the private Case Builder, or any Phase 3–6 analysis.
+
+## 2026-09-11 — Phase 3 actual performance and variance attribution completed
+
+**Status:** Locked
+
+### Decisions
+
+- Implemented January–June 2026 actual performance against the matched approved budget and January–June 2025 recorded actuals on `Variance`, using the July 8, 2026 information cutoff.
+- Kept recorded actuals independent: source nights, revenue, labor, payroll, and expenses link from `Data`; operating ratios, rates, unit costs, contribution, and margin are derived from recorded facts.
+- Implemented the locked sequential attribution methods for revenue, housekeeping, guest service, and fixed-staff payroll, with monthly effects summed to YTD and explicit interaction-order disclosure.
+- Kept distribution/payment expense mechanically linked to the fixed 4% policy, presented rent, property overhead, and marketing as direct cost changes, and reconciled all effects through the property operating contribution bridge.
+- Added an evidence-controlled commentary register that separates observed results from causal interpretation, preserves dated source wording and confidence, and limits Phase 4 implications to qualitative considerations rather than forecast assumptions.
+- Retained all 41 Phase 2 controls and added 47 Phase 3 controls. The combined master status remains terminal on `Checks`; no model or displayed status depends on a check result.
+- Kept `Forecast` and `Review` status-only. Phase 3 contains no reforecast, scenarios, management recommendations, charts, PDF, or portfolio images.
+
+### Validation boundary
+
+- Phase 3 validation requires exact frozen-source reconciliation, independent actual/budget/prior-year and bridge recomputation, a clean formula-error scan, all 88 controls passing, package and formula-architecture audits, rendered visual review, and disposable perturbation tests proving that source-reconciliation and key-integrity failures are detected while housekeeping driver changes do not rebuild recorded payroll.
+- Phase 3 does not authorize changes to frozen case version `v1.0`, any public CSV, `docs/case_brief.md`, the private Case Builder, or any Phase 4–6 output.

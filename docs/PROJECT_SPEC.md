@@ -2,7 +2,7 @@
 
 - **Status:** Locked
 - **Date:** 2026-09-11
-- **Implementation status:** Phase 2 complete; Phase 3 not started
+- **Implementation status:** Phase 3 complete; Phase 4 not started
 
 This document is the authoritative specification for the Palmetto Stay FP&A portfolio project. The decisions below are locked and must be implemented without redesign unless a later validation failure or documented project requirement justifies a controlled change.
 
@@ -215,7 +215,18 @@ The workbook must not contain hidden calculation tabs, macros, circular referenc
 - The FY2026 column sums additive measures. Occupancy, corporate share, ADR, RevPAR, housekeeping productivity, effective wage, guest-service unit cost, effective distribution fee rate, and contribution margin use annual numerators and denominators. Monthly operating levels use an appropriate average or weighted annual presentation.
 - `Checks` is terminal. It reads source and Budget results, contains the master Phase 2 status, and does not feed any other worksheet.
 - `Start` contains a static instruction to inspect `Checks`. It does not display or reference the master check result. This controlled correction replaces the proposed Start-to-Checks dependency and preserves the rule that checks validate the model without driving model outputs.
-- `Forecast`, `Variance`, and `Review` contain status notices only. Their calculations and management content remain reserved for later phases.
+- `Forecast` and `Review` contain status notices only. Their calculations and management content remain reserved for later phases.
+
+### 12.2 Phase 3 implementation
+
+- `Variance` analyzes January–June 2026 recorded actuals against the matched January–June 2026 approved budget and January–June 2025 recorded actuals. The information cutoff is July 8, 2026.
+- Actual room nights, segment revenue, housekeeping hours and payroll, guest-service expense, distribution/payment expense, fixed-staff FTE and payroll, rent, property overhead, and marketing link to the frozen `Data` facts. Actual ADR, RevPAR, mix, productivity, effective wage, unit cost, contribution, and margin are derived from recorded numerators and denominators rather than budget assumptions.
+- The sheet presents a YTD scorecard and three vertically stacked monthly blocks for approved budget, recorded actual, and actual minus budget. Additive YTD measures sum monthly amounts; YTD ratios use aggregate numerators and denominators.
+- Revenue is attributed in the locked sequence of volume, customer mix, and rate. Housekeeping is attributed in the locked sequence of volume, efficiency, and wage rate. Guest service separates volume and unit-cost effects; fixed-staff payroll separates FTE and rate effects. Each bridge is shown monthly and YTD and reconciles to its reported variance.
+- Distribution/payment expense remains mechanically linked to 4% of recorded revenue. Rent, property overhead, and marketing are shown as direct cost changes. The property operating contribution bridge reverses expense cost changes and reconciles budget contribution to recorded actual contribution.
+- The evidence-controlled commentary register includes only meaningful results and supplied case events. It identifies period, observed result, financial impact, operating driver, dated evidence, confidence, classification, qualitative Phase 4 implication, and follow-up while distinguishing observation from causal interpretation.
+- `Checks` retains the 41 Phase 2 controls and adds 47 Phase 3 controls for period and key completeness, actual reconstruction, budget linkage, ratio aggregation, bridge integrity, contribution signs, and workbook architecture. The 88-control master status remains terminal on `Checks`, and no other sheet depends on it.
+- `Forecast` and `Review` remain status-only. Phase 3 adds no reforecast, scenarios, management recommendations, charts, PDF, or portfolio images.
 
 ## 13. Management output
 

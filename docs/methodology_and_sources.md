@@ -41,7 +41,21 @@ The `Budget` sheet matches each monthly header to `Assumptions` and applies the 
 
 The FY2026 column sums additive measures. It calculates occupancy, corporate share, blended ADR, RevPAR, housekeeping hours per occupied room, effective housekeeping wage, guest-service unit cost, effective distribution fee rate, and contribution margin from annual numerators and denominators. Monthly operating levels use an appropriate annual average or weighted calculation.
 
-`Checks` remains terminal. It reads source and Budget results but does not feed model calculations or displayed statuses elsewhere. `Start` contains only a static instruction to inspect `Checks`; it has no formula dependency on the check result. `Forecast`, `Variance`, and `Review` remain status-only sheets until their authorized phases.
+`Checks` remains terminal. It reads source and Budget results but does not feed model calculations or displayed statuses elsewhere. `Start` contains only a static instruction to inspect `Checks`; it has no formula dependency on the check result. `Forecast` and `Review` remain status-only sheets until their authorized phases.
+
+## Phase 3 actual-performance and variance methodology
+
+Phase 3 uses January–June 2026 recorded actuals, the matching six months of the approved 2026 Budget, and January–June 2025 recorded actuals. The analysis cutoff is July 8, 2026. `Variance` retrieves recorded amounts from `Data` and approved-budget amounts from `Budget`; it does not copy or independently hardcode budget outputs.
+
+Actual segment ADR equals recorded segment revenue divided by recorded segment nights. Blended ADR, RevPAR, corporate share, housekeeping hours per occupied room, effective housekeeping wage, guest-service cost per occupied room, fixed-staff cost per FTE-month, distribution rate, and contribution margin are derived from recorded numerators and denominators. YTD ratios use aggregate YTD numerators and denominators rather than averages of monthly ratios.
+
+The revenue bridge applies volume, then customer mix, then rate. The housekeeping bridge applies volume, then efficiency, then wage rate. These are sequential attribution conventions: interaction effects follow the documented order, which is consistent and fully reconciling but is not asserted to be the only possible causal allocation. Guest-service expense separates occupied-room volume from unit cost, and fixed-staff payroll separates FTE from cost per FTE. Each driver bridge is calculated monthly, summed to YTD, and compared with the recorded actual-minus-budget variance.
+
+Underlying expense schedules use actual cost minus budget cost, where positive is unfavorable. The contribution bridge reverses those expense effects so positive contribution impact is favorable; revenue effects enter unchanged. Distribution/payment expense remains fixed at 4% of recognized room revenue, so its cost change is mechanically tied to the revenue variance and has no independent rate explanation. Rent, property overhead, and marketing are presented as direct cost changes.
+
+The commentary register is evidence-controlled. It records the period, observed result, calculated financial impact, operating driver, dated case-update reference, confidence, classification, qualitative Phase 4 implication, and required follow-up. A materiality flag or management observation is not treated as proof of causation, and no forecast assumption is created in Phase 3.
+
+`Checks` retains the 41 Phase 2 controls and appends 47 Phase 3 controls for source-period and key completeness, actual reconstruction, budget linkage, YTD aggregation, bridge residuals, contribution signs, and workbook architecture. All checks are terminal: no other worksheet references `Checks`. `Start` provides a static inspection instruction, while `Forecast` and `Review` remain status-only and contain no Phase 4 output.
 
 ## Public source files and fields
 
