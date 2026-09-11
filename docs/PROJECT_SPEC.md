@@ -2,7 +2,7 @@
 
 - **Status:** Locked
 - **Date:** 2026-09-11
-- **Implementation status:** Phase 3 complete; Phase 4 not started
+- **Implementation status:** Phase 4 complete; Phase 5 not started
 
 This document is the authoritative specification for the Palmetto Stay FP&A portfolio project. The decisions below are locked and must be implemented without redesign unless a later validation failure or documented project requirement justifies a controlled change.
 
@@ -228,6 +228,17 @@ The workbook must not contain hidden calculation tabs, macros, circular referenc
 - `Checks` retains the 41 Phase 2 controls and adds 47 Phase 3 controls for period and key completeness, actual reconstruction, budget linkage, ratio aggregation, bridge integrity, contribution signs, and workbook architecture. The 88-control master status remains terminal on `Checks`, and no other sheet depends on it.
 - `Forecast` and `Review` remain status-only. Phase 3 adds no reforecast, scenarios, management recommendations, charts, PDF, or portfolio images.
 
+### 12.3 Phase 4 implementation
+
+- `2026 RF1` uses case version `v1.0`, the July 8, 2026 information cutoff, January–June recorded actuals, and a July–December driver-based forecast. Base is the official working reforecast; Upside and Downside are bounded, unweighted sensitivities.
+- `Assumptions` preserves the approved-budget table unchanged and adds a visibly separate RF1 layer. Base inputs show monthly operating drivers with basis, source, and rationale. Scenario changes are limited to occupied room nights, corporate share, Retail ADR, Corporate ADR, and housekeeping hours per occupied room.
+- Base preserves approved seasonality while allowing partial retail/leisure recovery and continued but limited corporate support. Segment ADRs are forecast independently. The April housekeeping wage increase remains structural, temporary productivity disruption normalizes over a documented path, deferred June marketing is recognized in September, and the unconfirmed May overhead item is not annualized.
+- `Forecast` contains a compact full-year summary and three vertically stacked twelve-month blocks. January–June in every case links to the authoritative Base actual section; July–December references visible scenario assumptions. FY2026 equals H1 recorded actual plus H2 forecast, and annual ratios use aggregate numerators and denominators.
+- Base is expanded by default. Upside and Downside detail is grouped for collapse. Actual and forecast months have explicit `A` and `F` labels, and each scenario compares with the approved FY2026 Budget.
+- `Checks` retains all 88 Phase 2–3 controls and adds 58 Phase 4 controls for forecast boundaries, actualization, assumptions, known updates, financial mechanics, scenario ordering, and architecture. The combined 146-control master status remains terminal on `Checks`; no other worksheet depends on it.
+- `Variance` remains the complete Phase 3 analysis and `Review` remains status-only. Phase 4 adds no management recommendations, charts, PDF, images, or final packaging.
+- RF1 accuracy cannot be evaluated until later actual results exist. The three scenarios are decision-support cases, not confidence intervals, and are not probability weighted.
+
 ## 13. Management output
 
 The final Review tab and exported PDF will contain two pages.
@@ -328,7 +339,7 @@ The private `Palmetto_Stay_Case_Builder_AUTHORING.xlsx` is intentionally exclude
 - **Phase 1 — Synthetic case construction, validation, and freeze.**
 - **Phase 2 — Workbook architecture and frozen annual budget.**
 - **Phase 3 — Actuals, KPIs, and variance analysis.**
-- **Phase 4 — Reforecast and scenarios.**
+- **Phase 4 — Reforecast and scenarios (complete).**
 - **Phase 5 — Management output and repository packaging.**
 - **Phase 6 — Independent audit, remediation, and final release.**
 

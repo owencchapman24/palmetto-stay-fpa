@@ -57,6 +57,24 @@ The commentary register is evidence-controlled. It records the period, observed 
 
 `Checks` retains the 41 Phase 2 controls and appends 47 Phase 3 controls for source-period and key completeness, actual reconstruction, budget linkage, YTD aggregation, bridge residuals, contribution signs, and workbook architecture. All checks are terminal: no other worksheet references `Checks`. `Start` provides a static inspection instruction, while `Forecast` and `Review` remain status-only and contain no Phase 4 output.
 
+## Phase 4 reforecast and scenario methodology
+
+`2026 RF1` uses case version `v1.0` and the July 8, 2026 information cutoff. January–June is an immutable actual period sourced from `Data`; July–December is a forecast period driven by a separate visible RF1 layer on `Assumptions`. The approved-budget assumption table remains frozen and continues to drive only `Budget`.
+
+The Base case is the official working reforecast. It preserves approved monthly seasonality while reflecting first-half retail/leisure weakness, a supportable partial recovery, and continued but limited negotiated-corporate support documented in the dated case updates. Retail and Corporate ADR are forecast independently. Inputs without better evidence remain tied to the approved Budget; analyst judgment is explicitly labeled and is not calibrated backward to a contribution target.
+
+The April housekeeping wage increase is treated as structural, with a loaded wage of $23.25 per hour throughout July–December. Base housekeeping hours per occupied room normalize gradually to the approved path by October; Upside normalizes faster and Downside more slowly. Guest-service unit cost, the 4% distribution fee, fixed staffing, rent, property overhead, and marketing treatment are held constant across scenarios.
+
+The documented June marketing deferral is treated as timing: $18,000 is included in September and is not double counted. Full-year marketing is $167,600 because the other recorded first-half months are $600 above their approved total. The unconfirmed May property-overhead item is not treated as recurring; July–December retains the approved baseline while the uncertainty remains documented for later review.
+
+Upside and Downside change only five H2 drivers: occupied room nights, corporate share, Retail ADR, Corporate ADR, and housekeeping hours per occupied room. They use the same January–June actuals as Base and do not apply blanket income-statement shocks. They are unweighted decision-support sensitivities, not separately approved plans or confidence intervals.
+
+For each case, forecast segment nights equal total occupied room nights allocated by corporate share; segment revenue equals segment nights times segment ADR; variable costs follow the relevant volume and rate drivers; and fixed costs reference visible monthly assumptions. FY2026 equals January–June recorded actual plus July–December forecast. Annual occupancy, mix, ADR, RevPAR, productivity, effective rates, unit costs, and margin use aggregate annual numerators and denominators.
+
+The full-year summary compares approved Budget, Base, Upside, and Downside, while the detailed blocks retain explicit `A` and `F` period labels. Base is expanded and Upside/Downside detail is grouped for collapse. `Checks` retains all 88 prior controls and adds 58 Phase 4 controls; its 146-control master status remains terminal. `Variance` is preserved unchanged and `Review` remains status-only pending Phase 5.
+
+RF1 forecast accuracy cannot be evaluated until later actual results exist. Phase 3 actual-versus-budget analysis is the available evidence about approved-plan performance; no artificial future actuals were created. Phase 4 validation covers independent scenario reconstruction, formula and package integrity, visual inspection, and restored disposable sensitivity tests, but excludes management conclusions, recommendations, charts, PDF/image exports, and final packaging.
+
 ## Public source files and fields
 
 ### `approved_budget_assumptions.csv`

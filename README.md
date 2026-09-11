@@ -2,7 +2,7 @@
 
 Excel-based FP&A case study for a fictional limited-service hotel, featuring annual budgeting, actual-vs-plan variance analysis, driver-based reforecasting, scenarios, and management reporting. The project is designed as a focused Analyst I portfolio case with a governed, auditable path from source facts to a two-page management review.
 
-> **Current status: Phase 3 complete; the approved 2026 operating budget and January–June actual-performance, KPI, and variance analysis are built; Phase 4 has not started.**
+> **Current status: Phase 4 complete; the approved 2026 operating budget, January–June actual-performance analysis, and 2026 RF1 Base/Upside/Downside reforecast are built. Management reporting and final packaging remain scheduled for later phases.**
 
 > **Synthetic-case disclosure:** Palmetto Stay is a fictional hotel created for an independent FP&A portfolio project. All company-specific historical results, budgets, actuals, operating records, staffing information, and management updates are synthetic. Public sources may inform selected industry definitions and modeling practices; they are not the source of Palmetto Stay’s internal data. The project does not represent employment, client work, or access to confidential company information.
 
@@ -30,7 +30,7 @@ The approved exclusions include multi-property operations, ancillary restaurants
 - Two selected review images in `images/`.
 - Supporting case brief and methodology documentation in `docs/`.
 
-The Phase 1 source files and documentation and the Phase 2–3 public workbook now exist. The workbook contains the final eight-tab architecture, static frozen-source imports, a formula-driven approved 2026 operating budget, and reconciled January–June 2026 actual-performance analysis against matched budget and prior year. Reforecasting, scenarios, management conclusions, the review PDF, and portfolio images have not been built.
+The Phase 1 source files and documentation and the Phase 2–4 public workbook now exist. The workbook contains the final eight-tab architecture, static frozen-source imports, a formula-driven approved 2026 operating budget, reconciled January–June 2026 actual-performance analysis, and the `2026 RF1` reforecast with Base, Upside, and Downside cases. Management conclusions, the review PDF, and portfolio images have not been built.
 
 ## Available Phase 1 source files
 
@@ -42,16 +42,17 @@ The Phase 1 source files and documentation and the Phase 2–3 public workbook n
 
 Case version `v1.0` contains January–December 2025 historical actuals, January–June 2026 recorded actuals, and the January–December 2026 approved assumption pack. The private deterministic Case Builder is retained outside this public repository.
 
-## Available Phase 2–3 workbook
+## Available Phase 2–4 workbook
 
 - `model/Palmetto_Stay_FP&A_Model.xlsx` — the public Excel workbook with the eight locked visible tabs in their final order.
 - `Data` contains static imports of the four recorded-fact and case-update sources.
-- `Assumptions` contains the frozen approved 2026 assumption pack as the single Budget input source.
+- `Assumptions` preserves the frozen approved 2026 assumption pack and adds a visibly separate `2026 RF1` assumption layer with basis, source, and rationale.
 - `Budget` calculates the monthly and FY2026 approved operating budget from those assumptions and internal calendar logic.
 - `Variance` contains the YTD scorecard, matched monthly actual-versus-budget detail, prior-year comparison, reconciled revenue and cost-driver bridges, the contribution bridge, and an evidence-controlled commentary register.
-- `Checks` is a terminal control sheet with retained Phase 2 controls and added Phase 3 source, reconstruction, comparison, bridge, and architecture controls. No other worksheet depends on its results, and `Start` directs the reviewer to inspect it using static text.
+- `Forecast` contains January–June recorded actuals, July–December driver-based forecasts, a full-year scenario summary, and vertically stacked Base, Upside, and Downside operating-model blocks. Base is expanded; Upside and Downside detail is grouped for collapse.
+- `Checks` is a terminal control sheet with 146 retained and expanded controls spanning the budget, actuals, variance bridges, forecast boundary, scenario logic, and architecture. No other worksheet depends on its results, and `Start` directs the reviewer to inspect it using static text.
 
-`Forecast` and `Review` contain intentional status notices only until their authorized implementation phases. Phase 3 includes no forecast values, scenario outputs, management recommendations, charts, or exported review artifacts.
+`Review` remains an intentional status-only sheet until Phase 5. Phase 4 includes no management recommendations, charts, PDF, images, or exported review artifacts.
 
 ## Implementation phases
 
@@ -59,7 +60,7 @@ Case version `v1.0` contains January–December 2025 historical actuals, January
 2. **Phase 1 — Synthetic case construction, validation, and freeze (complete):** produced deterministic source facts privately and published validated frozen inputs.
 3. **Phase 2 — Workbook architecture and frozen annual budget (complete):** built the eight-tab workbook, imported the frozen sources, and calculated the driver-based approved budget.
 4. **Phase 3 — Actuals, KPIs, and variance analysis (complete):** linked recorded facts, built reconciled monthly and YTD performance analysis, attributed material variances, and documented evidence boundaries.
-5. **Phase 4 — Reforecast and scenarios:** create the July–December outlook and three operational scenarios.
+5. **Phase 4 — Reforecast and scenarios (complete):** actualized the first half, built the July–December driver-based outlook, compared three bounded operating scenarios, and expanded model controls.
 6. **Phase 5 — Management output and repository packaging:** complete the two-page review and recruiter-ready repository.
 7. **Phase 6 — Independent audit, remediation, and final release:** validate, correct, and release the finished case.
 
@@ -90,7 +91,7 @@ palmetto-stay-fpa/
     └── variance_bridge.png
 ```
 
-The Phase 0 governance files, Phase 1 source-data and documentation files, and Phase 2–3 workbook now exist. Empty output and image directories have not been created.
+The Phase 0 governance files, Phase 1 source-data and documentation files, and Phase 2–4 workbook now exist. Empty output and image directories have not been created.
 
 ## Intended recruiter review experience
 

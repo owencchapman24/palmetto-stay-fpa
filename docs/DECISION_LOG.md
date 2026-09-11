@@ -92,3 +92,23 @@ Any source-data correction must be made through the private Case Builder, frozen
 
 - Phase 3 validation requires exact frozen-source reconciliation, independent actual/budget/prior-year and bridge recomputation, a clean formula-error scan, all 88 controls passing, package and formula-architecture audits, rendered visual review, and disposable perturbation tests proving that source-reconciliation and key-integrity failures are detected while housekeeping driver changes do not rebuild recorded payroll.
 - Phase 3 does not authorize changes to frozen case version `v1.0`, any public CSV, `docs/case_brief.md`, the private Case Builder, or any Phase 4–6 output.
+
+## 2026-09-11 — Phase 4 reforecast and driver-based scenarios completed
+
+**Status:** Locked
+
+### Decisions
+
+- Implemented `2026 RF1` using case version `v1.0`, the July 8, 2026 information cutoff, January–June recorded actuals, and a July–December driver-based forecast. Base is the official working reforecast; Upside and Downside are bounded sensitivities without probabilities.
+- Preserved the approved-budget assumption table exactly and added a separate RF1 assumption layer with visible monthly inputs, basis types, source references, and concise rationales.
+- Built Base around partial retail/leisure recovery, continued but limited negotiated-corporate support, independently forecast segment ADRs, the structural post-April housekeeping wage, staged productivity normalization, September recognition of deferred June marketing, and the approved remaining-period overhead baseline. The unconfirmed May overhead item was not annualized.
+- Limited Upside and Downside changes to occupied room nights, corporate share, Retail ADR, Corporate ADR, and housekeeping hours per occupied room. Wage, guest-service unit cost, distribution fee, fixed staffing, rent, overhead, and marketing remain aligned with Base.
+- Replaced the `Forecast` status notice with a full-year scenario summary and three vertically stacked twelve-month operating-model blocks. January–June is identical across cases and links to recorded facts; July–December uses visible assumptions; annual ratios are calculated from aggregate totals.
+- Kept Base expanded and applied collapsible grouping to Upside and Downside detail. Retained `Variance` unchanged and left `Review` status-only for Phase 5.
+- Retained all 88 prior controls and added 58 Phase 4 controls. The combined 146-control master status remains terminal on `Checks`, with no downstream dependency.
+- Stated that RF1 accuracy cannot be evaluated before later actuals exist and that scenarios are decision-support cases rather than confidence intervals.
+
+### Validation boundary
+
+- Phase 4 validation requires independent reconstruction of all monthly and annual scenario results, exact H1 actualization, preserved approved Budget and Phase 3 Variance logic, a clean formula-error scan, all 146 controls passing, package and formula-architecture audits, rendered inspection of every sheet and scenario block, and restored disposable sensitivity tests.
+- Phase 4 does not authorize changes to frozen case version `v1.0`, public CSVs, `docs/case_brief.md`, the private Case Builder, management reporting, charts, exports, or any Phase 5–6 work.
