@@ -2,7 +2,7 @@
 
 - **Status:** Locked
 - **Date:** 2026-09-11
-- **Implementation status:** Not started
+- **Implementation status:** Phase 1 complete; Phase 2 not started
 
 This document is the authoritative specification for the Palmetto Stay FP&A portfolio project. The decisions below are locked and must be implemented without redesign unless a later validation failure or documented project requirement justifies a controlled change.
 
@@ -19,6 +19,7 @@ This document is the authoritative specification for the Palmetto Stay FP&A port
 
 - January–December 2025: synthetic historical actuals.
 - January–December 2026: frozen budget.
+- January–December 2026 approved budget assumptions are supplied independently in `data/approved_budget_assumptions.csv`; the budget itself is calculated in Phase 2.
 - January–June 2026: synthetic recorded actuals.
 - July–December 2026: reforecast.
 - The full-year latest estimate equals six months of actuals plus six months of forecast.
@@ -79,6 +80,8 @@ Recorded actual inputs must include:
 - Fixed payroll and property costs.
 
 Actual ADR, effective wage, and guest-service unit cost are derived from recorded actual facts. The Budget and Forecast tabs will use forward driver formulas. The Data tab must not reconstruct actuals from budget assumptions.
+
+The frozen `data/approved_budget_assumptions.csv` file is the source input for the future Budget tab. It contains approved operating and cost drivers only. The Phase 2 Budget tab must calculate financial outputs from those assumptions and must not treat a precomputed budget as source data.
 
 ## 7. Distribution-fee rule
 
@@ -228,7 +231,7 @@ The management output is limited to a maximum of three charts and approximately 
 
 ## 14. Synthetic case construction
 
-The future private Case Builder must:
+The private Case Builder must:
 
 - Use deterministic, nonvolatile Excel formulas.
 - Avoid `RAND()` and `RANDBETWEEN()`.
@@ -249,15 +252,27 @@ The four planned case events are:
 
 ## 15. Frozen-data version control
 
-- The initial frozen case version is `v1.0`.
+- The initial case version `v1.0` was frozen on 2026-09-11 with a forecast information cutoff of 2026-07-08.
 - Actuals must not be hand-patched to make analysis reconcile.
 - Source-data errors must be corrected through the private Case Builder.
 - Source changes require a new case version, revalidation, and documentation.
 - Workbook-formula corrections do not require changing valid frozen source data.
 
+### 15.1 Frozen source interface
+
+All public Phase 1 CSVs are UTF-8, comma-delimited static values with one header row, ISO monthly period keys represented by the first day of each month, no formulas, and no blank records.
+
+- `approved_budget_assumptions.csv`: 12 rows for January–December 2026. Fields are `case_version`, `period`, `rooms_available`, `total_occupied_room_nights`, `corporate_share`, `retail_adr`, `corporate_adr`, `housekeeping_hours_per_occupied_room`, `housekeeping_loaded_wage_per_hour`, `guest_service_cost_per_occupied_room`, `distribution_fee_rate`, `fixed_staff_fte`, `fixed_staff_loaded_cost_per_fte`, `rent`, `property_overhead`, and `marketing`.
+- `operating_actuals.csv`: 36 rows covering 18 months and two customer segments. Fields are `case_version`, `period`, `segment`, `occupied_room_nights`, and `room_revenue`.
+- `labor_actuals.csv`: 18 monthly rows. Fields are `case_version`, `period`, `housekeeping_hours`, `housekeeping_payroll`, `fixed_staff_fte`, and `fixed_staff_payroll`.
+- `financial_actuals.csv`: 144 rows covering eight required accounts for each actual month. Fields are `case_version`, `period`, `account_code`, `account_name`, and `amount_usd`.
+- `case_updates.csv`: dated observations with fields `update_id`, `as_of_date`, `effective_start`, `effective_end`, `category`, `observation`, `evidence_status`, and `forecast_relevance`.
+
+The four versioned source files use `case_version = v1.0`. Actual ADR, effective housekeeping wage, housekeeping hours per occupied room, and guest-service cost per occupied room must remain derived measures and must not be added to the public actual-source schemas.
+
 ## 16. Planned final repository structure
 
-This is the planned final structure. Directories and deliverables that are not needed in Phase 0 must not be created early.
+This is the planned final structure. Directories and deliverables must be created only in their authorized implementation phase; currently empty directories must not be created early.
 
 ```text
 palmetto-stay-fpa/
@@ -265,6 +280,7 @@ palmetto-stay-fpa/
 ├── model/
 │   └── Palmetto_Stay_FP&A_Model.xlsx
 ├── data/
+│   ├── approved_budget_assumptions.csv
 │   ├── financial_actuals.csv
 │   ├── operating_actuals.csv
 │   ├── labor_actuals.csv

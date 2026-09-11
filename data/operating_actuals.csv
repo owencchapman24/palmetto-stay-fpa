@@ -1,0 +1,37 @@
+case_version,period,segment,occupied_room_nights,room_revenue
+v1.0,2025-01-01,Retail/Leisure,1154,167907.00
+v1.0,2025-01-01,Negotiated Corporate,427,55296.50
+v1.0,2025-02-01,Retail/Leisure,1109,165241.00
+v1.0,2025-02-01,Negotiated Corporate,431,56030.00
+v1.0,2025-03-01,Retail/Leisure,1367,211201.50
+v1.0,2025-03-01,Negotiated Corporate,586,78231.00
+v1.0,2025-04-01,Retail/Leisure,1387,220533.00
+v1.0,2025-04-01,Negotiated Corporate,623,85974.00
+v1.0,2025-05-01,Retail/Leisure,1518,257301.00
+v1.0,2025-05-01,Negotiated Corporate,714,101745.00
+v1.0,2025-06-01,Retail/Leisure,1505,264127.50
+v1.0,2025-06-01,Negotiated Corporate,775,111987.50
+v1.0,2025-07-01,Retail/Leisure,1647,304695.00
+v1.0,2025-07-01,Negotiated Corporate,926,139826.00
+v1.0,2025-08-01,Retail/Leisure,1612,293384.00
+v1.0,2025-08-01,Negotiated Corporate,868,128464.00
+v1.0,2025-09-01,Retail/Leisure,1407,241300.50
+v1.0,2025-09-01,Negotiated Corporate,693,99445.50
+v1.0,2025-10-01,Retail/Leisure,1455,242985.00
+v1.0,2025-10-01,Negotiated Corporate,653,91746.50
+v1.0,2025-11-01,Retail/Leisure,1235,190807.50
+v1.0,2025-11-01,Negotiated Corporate,505,68680.00
+v1.0,2025-12-01,Retail/Leisure,1228,192796.00
+v1.0,2025-12-01,Negotiated Corporate,477,65349.00
+v1.0,2026-01-01,Retail/Leisure,1144,172744.00
+v1.0,2026-01-01,Negotiated Corporate,514,68105.00
+v1.0,2026-02-01,Retail/Leisure,1075,164475.00
+v1.0,2026-02-01,Negotiated Corporate,529,70357.00
+v1.0,2026-03-01,Retail/Leisure,1192,188932.00
+v1.0,2026-03-01,Negotiated Corporate,730,100375.00
+v1.0,2026-04-01,Retail/Leisure,1111,182204.00
+v1.0,2026-04-01,Negotiated Corporate,839,117879.50
+v1.0,2026-05-01,Retail/Leisure,1176,201096.00
+v1.0,2026-05-01,Negotiated Corporate,963,139635.00
+v1.0,2026-06-01,Retail/Leisure,1314,237834.00
+v1.0,2026-06-01,Negotiated Corporate,951,141223.50

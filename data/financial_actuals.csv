@@ -1,0 +1,145 @@
+case_version,period,account_code,account_name,amount_usd
+v1.0,2025-01-01,4000,Room Revenue,223203.50
+v1.0,2025-01-01,5000,Housekeeping Payroll,18834.45
+v1.0,2025-01-01,5100,Guest Services,28458.00
+v1.0,2025-01-01,5200,Distribution and Payment,8928.14
+v1.0,2025-01-01,6000,Fixed Staff Payroll,28750.00
+v1.0,2025-01-01,6100,Rent,76000.00
+v1.0,2025-01-01,6200,Property Overhead,26800.00
+v1.0,2025-01-01,6300,Marketing,9000.00
+v1.0,2025-02-01,4000,Room Revenue,221271.00
+v1.0,2025-02-01,5000,Housekeeping Payroll,18110.40
+v1.0,2025-02-01,5100,Guest Services,28028.00
+v1.0,2025-02-01,5200,Distribution and Payment,8850.84
+v1.0,2025-02-01,6000,Fixed Staff Payroll,28800.00
+v1.0,2025-02-01,6100,Rent,76000.00
+v1.0,2025-02-01,6200,Property Overhead,26950.00
+v1.0,2025-02-01,6300,Marketing,8500.00
+v1.0,2025-03-01,4000,Room Revenue,289432.50
+v1.0,2025-03-01,5000,Housekeeping Payroll,22610.86
+v1.0,2025-03-01,5100,Guest Services,35935.20
+v1.0,2025-03-01,5200,Distribution and Payment,11577.30
+v1.0,2025-03-01,6000,Fixed Staff Payroll,28322.00
+v1.0,2025-03-01,6100,Rent,76000.00
+v1.0,2025-03-01,6200,Property Overhead,27100.00
+v1.0,2025-03-01,6300,Marketing,10500.00
+v1.0,2025-04-01,4000,Room Revenue,306507.00
+v1.0,2025-04-01,5000,Housekeeping Payroll,23436.60
+v1.0,2025-04-01,5100,Guest Services,37386.00
+v1.0,2025-04-01,5200,Distribution and Payment,12260.28
+v1.0,2025-04-01,6000,Fixed Staff Payroll,29000.00
+v1.0,2025-04-01,6100,Rent,76000.00
+v1.0,2025-04-01,6200,Property Overhead,27250.00
+v1.0,2025-04-01,6300,Marketing,12000.00
+v1.0,2025-05-01,4000,Room Revenue,359046.00
+v1.0,2025-05-01,5000,Housekeeping Payroll,25137.90
+v1.0,2025-05-01,5100,Guest Services,42184.80
+v1.0,2025-05-01,5200,Distribution and Payment,14361.84
+v1.0,2025-05-01,6000,Fixed Staff Payroll,29100.00
+v1.0,2025-05-01,6100,Rent,76000.00
+v1.0,2025-05-01,6200,Property Overhead,27600.00
+v1.0,2025-05-01,6300,Marketing,13500.00
+v1.0,2025-06-01,4000,Room Revenue,376115.00
+v1.0,2025-06-01,5000,Housekeeping Payroll,25738.92
+v1.0,2025-06-01,5100,Guest Services,43548.00
+v1.0,2025-06-01,5200,Distribution and Payment,15044.60
+v1.0,2025-06-01,6000,Fixed Staff Payroll,29200.00
+v1.0,2025-06-01,6100,Rent,76000.00
+v1.0,2025-06-01,6200,Property Overhead,27900.00
+v1.0,2025-06-01,6300,Marketing,17000.00
+v1.0,2025-07-01,4000,Room Revenue,444521.00
+v1.0,2025-07-01,5000,Housekeeping Payroll,27595.43
+v1.0,2025-07-01,5100,Guest Services,49916.20
+v1.0,2025-07-01,5200,Distribution and Payment,17780.84
+v1.0,2025-07-01,6000,Fixed Staff Payroll,29886.00
+v1.0,2025-07-01,6100,Rent,76000.00
+v1.0,2025-07-01,6200,Property Overhead,28400.00
+v1.0,2025-07-01,6300,Marketing,19000.00
+v1.0,2025-08-01,4000,Room Revenue,421848.00
+v1.0,2025-08-01,5000,Housekeeping Payroll,27193.20
+v1.0,2025-08-01,5100,Guest Services,47864.00
+v1.0,2025-08-01,5200,Distribution and Payment,16873.92
+v1.0,2025-08-01,6000,Fixed Staff Payroll,29988.00
+v1.0,2025-08-01,6100,Rent,76000.00
+v1.0,2025-08-01,6200,Property Overhead,28300.00
+v1.0,2025-08-01,6300,Marketing,16000.00
+v1.0,2025-09-01,4000,Room Revenue,340746.00
+v1.0,2025-09-01,5000,Housekeeping Payroll,24437.70
+v1.0,2025-09-01,5100,Guest Services,39900.00
+v1.0,2025-09-01,5200,Distribution and Payment,13629.84
+v1.0,2025-09-01,6000,Fixed Staff Payroll,29500.00
+v1.0,2025-09-01,6100,Rent,76000.00
+v1.0,2025-09-01,6200,Property Overhead,27800.00
+v1.0,2025-09-01,6300,Marketing,11000.00
+v1.0,2025-10-01,4000,Room Revenue,334731.50
+v1.0,2025-10-01,5000,Housekeeping Payroll,24701.54
+v1.0,2025-10-01,5100,Guest Services,39630.40
+v1.0,2025-10-01,5200,Distribution and Payment,13389.26
+v1.0,2025-10-01,6000,Fixed Staff Payroll,29600.00
+v1.0,2025-10-01,6100,Rent,76000.00
+v1.0,2025-10-01,6200,Property Overhead,27500.00
+v1.0,2025-10-01,6300,Marketing,12500.00
+v1.0,2025-11-01,4000,Room Revenue,259487.50
+v1.0,2025-11-01,5000,Housekeeping Payroll,20814.75
+v1.0,2025-11-01,5100,Guest Services,32190.00
+v1.0,2025-11-01,5200,Distribution and Payment,10379.50
+v1.0,2025-11-01,6000,Fixed Staff Payroll,29700.00
+v1.0,2025-11-01,6100,Rent,76000.00
+v1.0,2025-11-01,6200,Property Overhead,27100.00
+v1.0,2025-11-01,6300,Marketing,10500.00
+v1.0,2025-12-01,4000,Room Revenue,258145.00
+v1.0,2025-12-01,5000,Housekeeping Payroll,21186.33
+v1.0,2025-12-01,5100,Guest Services,31883.50
+v1.0,2025-12-01,5200,Distribution and Payment,10325.80
+v1.0,2025-12-01,6000,Fixed Staff Payroll,29800.00
+v1.0,2025-12-01,6100,Rent,76000.00
+v1.0,2025-12-01,6200,Property Overhead,27300.00
+v1.0,2025-12-01,6300,Marketing,15000.00
+v1.0,2026-01-01,4000,Room Revenue,240849.00
+v1.0,2026-01-01,5000,Housekeeping Payroll,20696.81
+v1.0,2026-01-01,5100,Guest Services,30838.80
+v1.0,2026-01-01,5200,Distribution and Payment,9633.96
+v1.0,2026-01-01,6000,Fixed Staff Payroll,29900.00
+v1.0,2026-01-01,6100,Rent,78000.00
+v1.0,2026-01-01,6200,Property Overhead,28050.00
+v1.0,2026-01-01,6300,Marketing,10200.00
+v1.0,2026-02-01,4000,Room Revenue,234832.00
+v1.0,2026-02-01,5000,Housekeeping Payroll,19408.40
+v1.0,2026-02-01,5100,Guest Services,29674.00
+v1.0,2026-02-01,5200,Distribution and Payment,9393.28
+v1.0,2026-02-01,6000,Fixed Staff Payroll,30025.00
+v1.0,2026-02-01,6100,Rent,78000.00
+v1.0,2026-02-01,6200,Property Overhead,27920.00
+v1.0,2026-02-01,6300,Marketing,8800.00
+v1.0,2026-03-01,4000,Room Revenue,289307.00
+v1.0,2026-03-01,5000,Housekeeping Payroll,23786.67
+v1.0,2026-03-01,5100,Guest Services,36710.20
+v1.0,2026-03-01,5200,Distribution and Payment,11572.28
+v1.0,2026-03-01,6000,Fixed Staff Payroll,30075.00
+v1.0,2026-03-01,6100,Rent,78000.00
+v1.0,2026-03-01,6200,Property Overhead,28620.00
+v1.0,2026-03-01,6300,Marketing,11300.00
+v1.0,2026-04-01,4000,Room Revenue,300083.50
+v1.0,2026-04-01,5000,Housekeeping Payroll,28109.25
+v1.0,2026-04-01,5100,Guest Services,37830.00
+v1.0,2026-04-01,5200,Distribution and Payment,12003.34
+v1.0,2026-04-01,6000,Fixed Staff Payroll,30200.00
+v1.0,2026-04-01,6100,Rent,78000.00
+v1.0,2026-04-01,6200,Property Overhead,28710.00
+v1.0,2026-04-01,6300,Marketing,13100.00
+v1.0,2026-05-01,4000,Room Revenue,340731.00
+v1.0,2026-05-01,5000,Housekeeping Payroll,29839.05
+v1.0,2026-05-01,5100,Guest Services,42352.20
+v1.0,2026-05-01,5200,Distribution and Payment,13629.24
+v1.0,2026-05-01,6000,Fixed Staff Payroll,30350.00
+v1.0,2026-05-01,6100,Rent,78000.00
+v1.0,2026-05-01,6200,Property Overhead,30350.00
+v1.0,2026-05-01,6300,Marketing,14200.00
+v1.0,2026-06-01,4000,Room Revenue,379057.50
+v1.0,2026-06-01,5000,Housekeeping Payroll,29490.30
+v1.0,2026-06-01,5100,Guest Services,45526.50
+v1.0,2026-06-01,5200,Distribution and Payment,15162.30
+v1.0,2026-06-01,6000,Fixed Staff Payroll,30250.00
+v1.0,2026-06-01,6100,Rent,78000.00
+v1.0,2026-06-01,6200,Property Overhead,29410.00
+v1.0,2026-06-01,6300,Marketing,6000.00

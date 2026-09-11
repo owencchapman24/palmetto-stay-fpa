@@ -28,3 +28,28 @@ This log records project-level decisions that control later implementation. It d
 The project should resemble excellent Analyst I work: accurate source handling, transparent driver logic, exact reconciliations, controlled forecasting, practical management communication, and disciplined scope. It should not resemble an enterprise planning system.
 
 These decisions are locked unless a later validation failure or documented project requirement justifies a change. Any justified change must be dated and recorded in this log before implementation proceeds under the revised decision.
+
+## 2026-09-11 — Phase 1 case version v1.0 frozen
+
+**Status:** Locked
+
+### Decisions
+
+- Created and froze synthetic case version `v1.0` on 2026-09-11 using a July 8, 2026 forecast information cutoff.
+- Retained a deterministic private Case Builder outside the public repository with four worksheets: Controls, Budget Pack, Actuals Generator, and Checks. The workbook contains no volatile random formulas, macros, circular references, hidden sheets, or external workbook links.
+- Froze the public source interface as five static UTF-8 CSV files: a 12-row approved 2026 assumption pack, 36 segment-level operating-actual rows, 18 labor-actual rows, 144 financial-actual rows, and seven dated case updates.
+- Added `data/approved_budget_assumptions.csv` as a necessary input-completeness correction. The analyst is supposed to receive an approved budget assumption pack, while the budget itself must be calculated in Phase 2. This correction adds an independent source input and does not expand analytical scope.
+- Preserved the actuals-independence rule. Public actual files store recorded nights, revenue, hours, payroll, and expenses; actual ADR, productivity, wage, and guest-service unit cost remain derived.
+- Applied the fixed 4% distribution/payment fee to recognized room revenue at stored source precision, with no fee-rate scenario or balancing item.
+- Used monthly seasonality, fixed month-specific variation, customer mix, segment ADR, labor productivity, wage schedules, fixed commitments, and dated event effects to construct the case without plugs.
+- Represented four case events: spring retail/leisure demand weakness, negotiated corporate transient support, a housekeeping wage and temporary productivity disruption, and a June marketing activity deferred to September.
+- Included ordinary month-to-month variation, several immaterial differences, and one modest property-overhead item whose cause remains unconfirmed and requires later follow-up.
+
+### Limitations and unresolved items
+
+- The case is synthetic and monthly. It does not include daily bookings, booking-channel detail, employee-level records, ancillary revenue streams, or non-property financial statements.
+- The evidence package is limited to information available through July 8, 2026.
+- The May property-overhead item remains under vendor-detail review. No cause has been assigned in the frozen source data.
+- Phase 1 does not contain a forecast vintage, variance conclusions, scenarios, or management recommendations.
+
+Any source-data correction must be made through the private Case Builder, frozen as a new case version, independently revalidated, and recorded in this log.

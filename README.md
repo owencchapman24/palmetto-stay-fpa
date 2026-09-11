@@ -2,7 +2,7 @@
 
 Excel-based FP&A case study for a fictional limited-service hotel, featuring annual budgeting, actual-vs-plan variance analysis, driver-based reforecasting, scenarios, and management reporting. The project is designed as a focused Analyst I portfolio case with a governed, auditable path from source facts to a two-page management review.
 
-> **Current status: Phase 0 complete; financial implementation has not started.**
+> **Current status: Phase 1 complete; synthetic case v1.0 is frozen; financial implementation has not started.**
 
 > **Synthetic-case disclosure:** Palmetto Stay is a fictional hotel created for an independent FP&A portfolio project. All company-specific historical results, budgets, actuals, operating records, staffing information, and management updates are synthetic. Public sources may inform selected industry definitions and modeling practices; they are not the source of Palmetto Stay’s internal data. The project does not represent employment, client work, or access to confidential company information.
 
@@ -25,17 +25,27 @@ The approved exclusions include multi-property operations, ancillary restaurants
 ## Planned final deliverables
 
 - `model/Palmetto_Stay_FP&A_Model.xlsx` — an eight-tab Excel model.
-- Four frozen source-data CSV files in `data/`.
+- Five frozen source-data CSV files in `data/`.
 - `outputs/Palmetto_Stay_Management_Review.pdf` — the two-page management review.
 - Two selected review images in `images/`.
 - Supporting case brief and methodology documentation in `docs/`.
 
-These deliverables are planned and do not yet exist. Results and conclusions will be added only after the model has been built and validated.
+The Phase 1 source files and documentation now exist. The final FP&A workbook, budget build, variance analysis, reforecast, scenarios, management output, PDF, and portfolio images have not been built. Results and conclusions will be added only after the model has been built and validated.
+
+## Available Phase 1 source files
+
+- `data/approved_budget_assumptions.csv` — the approved 2026 driver assumption pack for the future Budget tab.
+- `data/operating_actuals.csv` — occupied room nights and recorded room revenue by customer segment.
+- `data/labor_actuals.csv` — recorded housekeeping hours, housekeeping payroll, fixed-staff FTE, and fixed-staff payroll.
+- `data/financial_actuals.csv` — recorded monthly financial lines.
+- `data/case_updates.csv` — dated management and operating observations through July 8, 2026.
+
+Case version `v1.0` contains January–December 2025 historical actuals, January–June 2026 recorded actuals, and the January–December 2026 approved assumption pack. The private deterministic Case Builder is retained outside this public repository.
 
 ## Implementation phases
 
-1. **Phase 0 — Repository foundation and project governance:** define and lock the project before implementation.
-2. **Phase 1 — Synthetic case construction, validation, and freeze:** produce deterministic source facts privately and publish validated frozen inputs.
+1. **Phase 0 — Repository foundation and project governance (complete):** defined and locked the project before implementation.
+2. **Phase 1 — Synthetic case construction, validation, and freeze (complete):** produced deterministic source facts privately and published validated frozen inputs.
 3. **Phase 2 — Workbook architecture and frozen annual budget:** build the eight-tab workbook and driver-based budget.
 4. **Phase 3 — Actuals, KPIs, and variance analysis:** load recorded facts and build reconciled performance analysis.
 5. **Phase 4 — Reforecast and scenarios:** create the July–December outlook and three operational scenarios.
@@ -52,6 +62,7 @@ palmetto-stay-fpa/
 ├── model/
 │   └── Palmetto_Stay_FP&A_Model.xlsx
 ├── data/
+│   ├── approved_budget_assumptions.csv
 │   ├── financial_actuals.csv
 │   ├── operating_actuals.csv
 │   ├── labor_actuals.csv
@@ -68,7 +79,7 @@ palmetto-stay-fpa/
     └── variance_bridge.png
 ```
 
-Only the Phase 0 files currently exist; no empty deliverable directories have been created.
+The Phase 0 governance files and Phase 1 source-data and documentation files now exist. Empty model, output, and image directories have not been created.
 
 ## Intended recruiter review experience
 
