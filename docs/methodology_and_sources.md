@@ -21,7 +21,7 @@ The construction sequence is:
 7. Calculate distribution/payment expense as exactly 4% of recognized room revenue.
 8. Export the resulting recorded facts as static public CSV values.
 
-The 2026 approved assumption pack was constructed from completed 2025 history and documented planning assumptions and is dated before 2026 actual results. Limited authoring calculations confirmed that the driver pack produced a coherent, positive property operating contribution; the public budget was subsequently calculated in Phase 2 from the frozen assumptions.
+The fictional 2026 approved assumption pack was fixed before 2026 actual results were available, using planning assumptions and the historical information available at that time. Complete 2025 actuals are separately supplied for the later analyst review; completed December 2025 actuals were not available when the pack was fixed. Limited authoring calculations confirmed that the driver pack produced a coherent, positive property operating contribution; the public budget was subsequently calculated in Phase 2 from the frozen assumptions.
 
 ## Actuals-independence rule
 

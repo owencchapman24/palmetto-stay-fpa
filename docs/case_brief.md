@@ -48,7 +48,7 @@ Revenue and expense amounts are positive source values. Later cost-change schedu
 
 ## Budget and actuals
 
-The 2026 assumption pack was approved on December 15, 2025 after the 2025 history was complete and before any 2026 actual results were available. It supplies driver assumptions for the future budget calculation; it is not a precomputed budget.
+The fictional 2026 assumption pack was fixed on December 15, 2025, before any 2026 actual results were available. Complete 2025 historical actuals are separately supplied to the analyst for the later review; completed December 2025 actuals were not available when the pack was fixed. The pack supplies driver assumptions for the future budget calculation; it is not a precomputed budget.
 
 Actuals are recorded source facts. Segment ADR, housekeeping hours per occupied room, effective housekeeping wage, and guest-service cost per occupied room must be derived from recorded nights, revenue, hours, payroll, and expense. Do not reconstruct actuals from budget assumptions.
 
